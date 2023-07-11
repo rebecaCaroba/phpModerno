@@ -9,7 +9,7 @@
 <body>    
     <section>
         <div class="header">
-            <h1>Informe um número</h1>
+            <h1>Números aleatorios de 0 ate 100</h1>
         </div>
         <?php 
     if(isset($_POST['gerar'])){

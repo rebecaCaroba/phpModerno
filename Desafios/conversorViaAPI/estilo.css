@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400&display=swap');
+
+:root {
+    --Corprimaria: #4e67ff;
+    --Corsecundaria: #fec955;
+    --Branco: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+form {
+    padding: 40px;
+    background-color: var(--Corprimaria);
+    color: var(--Branco)
+}
+
+p {
+    margin: 10px 0px;
+}
+
+#idvalor, button {
+    background-color: rgba(255, 255, 255, 0.429);
+    color: var(--Branco);
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--Branco);
+    font-size: 20px;
+
+}
+
+#idvalor:focus {
+    outline: none;
+
+}
+
+#idvalor::placeholder {
+    color: var(--Branco);
+}
+
+.botao  {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--Corsecundaria);
+    width: 100%;
+    height: 45px;
+    cursor: pointer;
+    border: 1px solid black;
+    text-decoration: none;
+    color: var(--Branco);
+    font-size: 20px;
+    
+}
+
+.botao:hover {
+    border: none;
+}
+
+section {
+    font-size: 30px;
+}
+

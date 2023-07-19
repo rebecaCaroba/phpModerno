@@ -8,7 +8,7 @@
 </head>
 <body>
     <?php 
-        $sal = floatval($_POST['sal']) ?? 0;
+        $sal = $_POST['sal'] ?? 0;
     ?>
     <main>
         <h1>Informe seu salário mínimo</h1>
@@ -20,13 +20,18 @@
         <input type="submit" class="botao" value="Verificar">
     </form>
     </main>
-    <?php 
-            $total = intdiv($sal, 1380);
-            $res = $sal % 1380;
-            $padrao = numfmt_create("pt_BR", NumberFormatter::CURRENCY);
-
-        ?>
     <section style="display: block;">
+    <?php 
+        if($sal <= 0){
+            echo "Digite um número maior que zero!";
+            return;
+        }
+
+        $total = intdiv($sal, 1380);
+        $res = $sal % 1380;
+        $padrao = numfmt_create("pt_BR", NumberFormatter::CURRENCY);
+
+    ?>
         <h1>Resultado:</h1>
         <span><?= "Quem recebe um salario de ".numfmt_format_currency($padrao, $sal, "BRL").", ganha $total salários mínimos +".numfmt_format_currency($padrao, $res, "BRL")."." ?></span>
         <br><br>

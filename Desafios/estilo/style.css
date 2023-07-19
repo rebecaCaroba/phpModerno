@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,200;0,700;1,300;1,400&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --White: hsl(0, 0%, 100%);
+    --MediumGrey: hsl(216, 12%, 54%);
+    --LightGrey: hsl(217, 12%, 63%);
+    --DarkBlue: hsl(213, 19%, 18%);
+    --VeryDarkBlue: hsl(216, 12%, 8%);
+    --Orange: #663399;
+    }
+
+body {
+    background: var(--VeryDarkBlue);
+    color: var(--White);
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Overpass', sans-serif;
+    flex-direction: column;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    width: 450px;
+    height: auto;
+    border-radius: 20px;
+    background: var(--DarkBlue);
+    padding: 32px;
+}
+
+h1 {
+    margin-bottom: 10px;
+}
+
+.container {
+    margin-bottom: 10px;
+}
+
+section {
+    background-color: var(--DarkBlue);
+    padding: 32px;
+    margin: 30px;
+    width: 450px;
+    height: auto;
+    border-radius: 20px;
+}
+
+#res{
+    font-size: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.quociEDivis {
+    border-left: 6px solid var(--White);
+}
+
+.quociEDivis p:nth-child(2){
+    border-top: 6px solid var(--White);
+}
+
+.quociEDivis p {
+    padding-left: 30px;
+}
+
+.botao {
+    min-width: 100%;
+    height: 30px;
+    border-radius: 30px;
+    border: 0;
+    background-color: var(--Orange);
+    color: var(--White);
+    cursor: pointer;
+    font-size: 20px;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+input {
+    padding: 5px;
+    background-color: hsla(216, 12%, 54%, 0.193);
+    border: 0;
+    outline: none;
+    color: var(--White);
+}
+
+input:hover {
+    outline: none;
+}

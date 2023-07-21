@@ -29,8 +29,11 @@
         <h1>Resultado:</h1>
         <?php 
 
-        if($indice <= 0 ){
+        if($indice <= 0){
             echo "O índice precisa ser maior que zero e positivo";
+            return;
+        }else if($num < 0) {
+            echo "O número precisa ser positvo";
             return;
         }
         

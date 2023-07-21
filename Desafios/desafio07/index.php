@@ -32,14 +32,21 @@
             <label for="peso2">2ºPeso</label>
             <input type="number" name="peso2" id="idpeso2" value="<?=$p2?>">
         </div>
-        <input type="submit" class="botao" value="Calcular">
+        <input type="submit" class="botao" name="btn_enviar" value="Calcular">
     </form>
     </main>
     <section>
         <h1>Resultado:</h1>
         <?php 
-            
+            if(empty($v1) || empty($v2) || empty($p1) || empty($p2)){
+                echo "Por favor, preencha todos os campos corretamente.";
+                return;
+            }
+            $s = ($v1 + $v2)/2;
+            $p = ($v1*$p1+$v2*$p2)/($p1+$p2);
 
+            echo "<p>A <b>média aritmética simples</b> é: $s</p>";
+            echo "<p>A <b>média aritmética ponderada</b> é: ".number_format($p, 2,",",".")."</p>";
         ?>
     </section>
 </body>

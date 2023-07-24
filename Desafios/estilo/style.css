@@ -47,7 +47,7 @@ section {
     background-color: var(--DarkBlue);
     padding: 32px;
     margin: 30px;
-    width: 450px;
+    width: auto;
     height: auto;
     border-radius: 20px;
 }
